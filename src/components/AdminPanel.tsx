@@ -151,7 +151,7 @@ export const AdminPanel: React.FC = () => {
 
   // Ghost Factory™ auto /admin listener
   React.useEffect(() => {
-    if (window.location.pathname === '/admin') {
+    if (window.location.pathname.includes('admin') || window.location.hash.includes('admin')) {
       setIsOpen(true);
     }
   }, []);
@@ -165,7 +165,7 @@ export const AdminPanel: React.FC = () => {
         id="taco-admin-pass-btn"
       >
         <FolderLock className="w-4 h-4 text-amber-400 group-hover:rotate-12 transition-transform" />
-        [ ADMIN PASS ]
+        [ ⚡ ADMIN PASS: taco2026 ]
       </button>
 
       {/* Admin Panel Drawer */}
