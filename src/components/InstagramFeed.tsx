@@ -177,7 +177,7 @@ export const InstagramFeed: React.FC = () => {
             Social Dispatch
           </span>
           <h3 className="font-display font-medium text-3xl text-white mt-1">Inside Agave &amp; Mesa.</h3>
-          <p className="text-zinc-500 text-sm mt-1 max-w-xl">
+          <p className="text-zinc-300 text-sm mt-1 max-w-xl">
             Live updates, behind-the-scenes prep videos, and spontaneous culinary stories directly from our Instagram feed.
           </p>
         </div>
@@ -187,7 +187,7 @@ export const InstagramFeed: React.FC = () => {
           <button
             onClick={simulateFetchLatest}
             disabled={isFetching}
-            className="px-4 py-2 bg-charcoal hover:bg-zinc-800 border border-zinc-850 hover:border-zinc-700 text-zinc-300 hover:text-white rounded-xl text-xs font-medium flex items-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
+            className="px-5 py-3 min-h-[44px] bg-charcoal hover:bg-zinc-800 border border-zinc-850 hover:border-zinc-700 text-zinc-300 hover:text-white rounded-xl text-base font-semibold min-h-[44px] font-medium flex items-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
           >
             <RotateCw className={`w-3.5 h-3.5 ${isFetching ? 'animate-spin text-agave-400' : ''}`} />
             {isFetching ? 'Fetching Feed...' : 'Sync Feed'}
@@ -227,7 +227,7 @@ export const InstagramFeed: React.FC = () => {
                 Culinary Studio
               </span>
             </div>
-            <p className="text-xs text-zinc-400 font-sans max-w-md">
+            <p className="text-base text-zinc-200 leading-relaxed font-sans max-w-md">
               <span className="font-semibold text-zinc-300">Agave &amp; Mesa • Wood-Fired Gastronomy.</span> High-editorial catering, wood fire hearth rituals, &amp; fine Oaxacan comfort food commissions in Southern California.
             </p>
           </div>
@@ -237,15 +237,15 @@ export const InstagramFeed: React.FC = () => {
         <div className="flex gap-8 border-t md:border-t-0 md:border-l border-zinc-850 pt-4 md:pt-0 md:pl-8 justify-around w-full md:w-auto">
           <div className="text-center">
             <span className="block text-sm font-bold text-white font-mono">148</span>
-            <span className="text-[10px] uppercase tracking-wider text-zinc-500 font-mono">Posts</span>
+            <span className="text-xs font-semibold tracking-wider uppercase tracking-wider text-zinc-300 font-mono">Posts</span>
           </div>
           <div className="text-center">
             <span className="block text-sm font-bold text-white font-mono">12.4K</span>
-            <span className="text-[10px] uppercase tracking-wider text-zinc-500 font-mono">Followers</span>
+            <span className="text-xs font-semibold tracking-wider uppercase tracking-wider text-zinc-300 font-mono">Followers</span>
           </div>
           <div className="text-center">
             <span className="block text-sm font-bold text-white font-mono">382</span>
-            <span className="text-[10px] uppercase tracking-wider text-zinc-500 font-mono">Following</span>
+            <span className="text-xs font-semibold tracking-wider uppercase tracking-wider text-zinc-300 font-mono">Following</span>
           </div>
         </div>
       </div>
@@ -255,7 +255,7 @@ export const InstagramFeed: React.FC = () => {
         <button
           onClick={() => setActiveTab('posts')}
           className={`pb-3 flex items-center gap-2 border-b-2 transition-all cursor-pointer ${
-            activeTab === 'posts' ? 'border-agave-400 text-white' : 'border-transparent text-zinc-500 hover:text-zinc-300'
+            activeTab === 'posts' ? 'border-agave-400 text-white' : 'border-transparent text-zinc-300 hover:text-zinc-300'
           }`}
         >
           <Grid className="w-3.5 h-3.5" />
@@ -264,7 +264,7 @@ export const InstagramFeed: React.FC = () => {
         <button
           onClick={() => setActiveTab('reels')}
           className={`pb-3 flex items-center gap-2 border-b-2 transition-all cursor-pointer ${
-            activeTab === 'reels' ? 'border-agave-400 text-white' : 'border-transparent text-zinc-500 hover:text-zinc-300'
+            activeTab === 'reels' ? 'border-agave-400 text-white' : 'border-transparent text-zinc-300 hover:text-zinc-300'
           }`}
         >
           <Tv className="w-3.5 h-3.5" />
@@ -273,7 +273,7 @@ export const InstagramFeed: React.FC = () => {
         <button
           onClick={() => setActiveTab('tagged')}
           className={`pb-3 flex items-center gap-2 border-b-2 transition-all cursor-pointer ${
-            activeTab === 'tagged' ? 'border-agave-400 text-white' : 'border-transparent text-zinc-500 hover:text-zinc-300'
+            activeTab === 'tagged' ? 'border-agave-400 text-white' : 'border-transparent text-zinc-300 hover:text-zinc-300'
           }`}
         >
           <UserSquare2 className="w-3.5 h-3.5" />
@@ -327,7 +327,7 @@ export const InstagramFeed: React.FC = () => {
                 </div>
                 
                 {/* Truncated caption snippet preview on hover */}
-                <p className="text-[10px] text-zinc-300 text-center line-clamp-2 max-w-[80%] font-sans">
+                <p className="text-xs font-semibold tracking-wider text-zinc-300 text-center line-clamp-2 max-w-[80%] font-sans">
                   {post.caption}
                 </p>
               </div>
@@ -350,7 +350,7 @@ export const InstagramFeed: React.FC = () => {
             </span>
             <div className="space-y-1">
               <h4 className="text-sm font-semibold text-white">Culinary Process Reels</h4>
-              <p className="text-xs text-zinc-500 max-w-sm mx-auto">
+              <p className="text-xs text-zinc-300 max-w-sm mx-auto">
                 Watch full high-definition clips of wood-charcoal hearth operations, slow smoking routines, and hand-mashing heirloom corn.
               </p>
             </div>
@@ -373,7 +373,7 @@ export const InstagramFeed: React.FC = () => {
             </span>
             <div className="space-y-1">
               <h4 className="text-sm font-semibold text-white">Client Plating Captures</h4>
-              <p className="text-xs text-zinc-500 max-w-sm mx-auto">
+              <p className="text-xs text-zinc-300 max-w-sm mx-auto">
                 Discover unedited stories and photo updates tagged by our event organizers, newlyweds, and dining guests.
               </p>
             </div>
@@ -428,7 +428,7 @@ export const InstagramFeed: React.FC = () => {
                       </div>
                       <div>
                         <span className="text-xs font-bold text-white block">agaveandmesa</span>
-                        <span className="text-[9px] font-mono text-zinc-500">Downtown Los Angeles</span>
+                        <span className="text-[9px] font-mono text-zinc-300">Downtown Los Angeles</span>
                       </div>
                     </div>
                     
@@ -450,13 +450,13 @@ export const InstagramFeed: React.FC = () => {
                     {/* Hashtags list */}
                     <div className="flex flex-wrap gap-1.5 pt-1">
                       {selectedPost.tags.map((tag) => (
-                        <span key={tag} className="text-[10px] font-mono text-agave-400 hover:text-agave-300 cursor-pointer">
+                        <span key={tag} className="text-xs font-semibold tracking-wider font-mono text-agave-400 hover:text-agave-300 cursor-pointer">
                           {tag}
                         </span>
                       ))}
                     </div>
 
-                    <span className="text-[9px] font-mono text-zinc-500 block uppercase pt-2">
+                    <span className="text-[9px] font-mono text-zinc-300 block uppercase pt-2">
                       {selectedPost.date}
                     </span>
                   </div>
@@ -466,7 +466,7 @@ export const InstagramFeed: React.FC = () => {
                 <div className="pt-4 border-t border-zinc-850 space-y-4">
                   <div className="flex justify-between items-center">
                     <div className="flex gap-4">
-                      <button className="flex items-center gap-1.5 text-zinc-300 hover:text-chipotle-400 transition-colors font-mono text-xs">
+                      <button className="flex items-center gap-1.5 text-zinc-300 hover:text-chipotle-400 transition-colors font-mono text-base font-semibold min-h-[44px]">
                         <Heart className="w-4 h-4 text-chipotle-400 fill-chipotle-400" />
                         {selectedPost.likes}
                       </button>
@@ -483,9 +483,9 @@ export const InstagramFeed: React.FC = () => {
                       type="text"
                       placeholder="Add a comment as guest..."
                       disabled
-                      className="w-full bg-zinc-900/50 border border-zinc-850 text-xs rounded-xl py-2 px-3 text-zinc-500 focus:outline-none placeholder-zinc-600"
+                      className="w-full bg-zinc-900/50 border border-zinc-850 text-base min-h-[44px] rounded-xl py-2 px-3 text-zinc-300 focus:outline-none placeholder-zinc-600"
                     />
-                    <button className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-mono font-bold text-agave-400 opacity-60 pointer-events-none">
+                    <button className="absolute right-2.5 top-1/2 -translate-y-1/2 text-base font-semibold min-h-[44px] font-semibold tracking-wider font-mono font-bold text-agave-400 opacity-60 pointer-events-none">
                       POST
                     </button>
                   </div>

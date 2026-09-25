@@ -189,7 +189,7 @@ export const AdminPanel: React.FC = () => {
                   </span>
                 )}
               </div>
-              <p className="text-zinc-500 text-xs font-mono mt-0.5">Control location feeds, menu assets, and catering leads.</p>
+              <p className="text-zinc-300 text-xs font-mono mt-0.5">Control location feeds, menu assets, and catering leads.</p>
             </div>
           </div>
 
@@ -201,7 +201,7 @@ export const AdminPanel: React.FC = () => {
                   showToast('Database restored to default states.');
                 }
               }}
-              className="p-2 border border-zinc-850 text-zinc-500 hover:text-zinc-300 hover:bg-zinc-900 rounded-lg transition-all"
+              className="p-2 border border-zinc-850 text-zinc-300 hover:text-zinc-300 hover:bg-zinc-900 rounded-lg transition-all"
               title="Reset Database to Defaults"
             >
               <RotateCcw className="w-4 h-4" />
@@ -222,7 +222,7 @@ export const AdminPanel: React.FC = () => {
             className={`flex-1 py-3 text-center text-xs font-mono font-bold uppercase tracking-wider transition-colors border-b-2 ${
               activeTab === 'location'
                 ? 'border-agave-500 text-agave-400'
-                : 'border-transparent text-zinc-500 hover:text-zinc-300'
+                : 'border-transparent text-zinc-300 hover:text-zinc-300'
             }`}
           >
             Location Broadcast
@@ -232,7 +232,7 @@ export const AdminPanel: React.FC = () => {
             className={`flex-1 py-3 text-center text-xs font-mono font-bold uppercase tracking-wider transition-colors border-b-2 ${
               activeTab === 'menu'
                 ? 'border-agave-500 text-agave-400'
-                : 'border-transparent text-zinc-500 hover:text-zinc-300'
+                : 'border-transparent text-zinc-300 hover:text-zinc-300'
             }`}
           >
             Menu Builder ({menuItems.length})
@@ -242,7 +242,7 @@ export const AdminPanel: React.FC = () => {
             className={`flex-1 py-3 text-center text-xs font-mono font-bold uppercase tracking-wider transition-colors border-b-2 ${
               activeTab === 'catering'
                 ? 'border-agave-500 text-agave-400'
-                : 'border-transparent text-zinc-500 hover:text-zinc-300'
+                : 'border-transparent text-zinc-300 hover:text-zinc-300'
             }`}
           >
             Catering Pipeline ({cateringLeads.length})
@@ -252,7 +252,7 @@ export const AdminPanel: React.FC = () => {
             className={`flex-1 py-3 text-center text-xs font-mono font-bold uppercase tracking-wider transition-colors border-b-2 ${
               activeTab === 'vip'
                 ? 'border-agave-500 text-agave-400'
-                : 'border-transparent text-zinc-500 hover:text-zinc-300'
+                : 'border-transparent text-zinc-300 hover:text-zinc-300'
             }`}
           >
             VIP Club ({(newsletterSubscribers || []).length})
@@ -267,12 +267,12 @@ export const AdminPanel: React.FC = () => {
             <form onSubmit={handleLocSubmit} className="space-y-6 max-w-2xl mx-auto">
               <div className="space-y-1">
                 <h4 className="font-display text-lg text-white font-medium">Broadcast Real-time Spot</h4>
-                <p className="text-zinc-500 text-xs">Update your truck coords, active street address, and opening status instantly.</p>
+                <p className="text-zinc-300 text-xs">Update your truck coords, active street address, and opening status instantly.</p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Current Spot Name</label>
+                  <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Current Spot Name</label>
                   <input
                     type="text"
                     required
@@ -284,7 +284,7 @@ export const AdminPanel: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Operational Hours</label>
+                  <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Operational Hours</label>
                   <input
                     type="text"
                     required
@@ -297,7 +297,7 @@ export const AdminPanel: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Street Address</label>
+                <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Street Address</label>
                 <input
                   type="text"
                   required
@@ -310,7 +310,7 @@ export const AdminPanel: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Latitude Coords</label>
+                  <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Latitude Coords</label>
                   <input
                     type="number"
                     step="0.000001"
@@ -321,7 +321,7 @@ export const AdminPanel: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Longitude Coords</label>
+                  <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Longitude Coords</label>
                   <input
                     type="number"
                     step="0.000001"
@@ -332,7 +332,7 @@ export const AdminPanel: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Operational Status</label>
+                  <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-400 mb-1.5">Operational Status</label>
                   <select
                     value={locForm.status}
                     onChange={(e) => setLocForm({ ...locForm, status: e.target.value as TruckLocation['status'] })}
@@ -362,7 +362,7 @@ export const AdminPanel: React.FC = () => {
               <div className="flex justify-between items-center">
                 <div className="space-y-1">
                   <h4 className="font-display text-lg text-white font-medium">Digital Catalog Registry</h4>
-                  <p className="text-zinc-500 text-xs">Create, edit, or remove gastromy listings in real-time.</p>
+                  <p className="text-zinc-300 text-xs">Create, edit, or remove gastromy listings in real-time.</p>
                 </div>
                 {!isAddingMenu && (
                   <button
@@ -398,7 +398,7 @@ export const AdminPanel: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setIsAddingMenu(false)}
-                      className="text-zinc-500 hover:text-zinc-300 text-xs font-mono"
+                      className="text-zinc-300 hover:text-zinc-300 text-xs font-mono"
                     >
                       Cancel
                     </button>
@@ -406,7 +406,7 @@ export const AdminPanel: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-500 mb-1">Recipe Name</label>
+                      <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-300 mb-1">Recipe Name</label>
                       <input
                         type="text"
                         required
@@ -417,7 +417,7 @@ export const AdminPanel: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-500 mb-1">Category</label>
+                      <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-300 mb-1">Category</label>
                       <select
                         value={menuForm.category}
                         onChange={(e) => setMenuForm({ ...menuForm, category: e.target.value as MenuItem['category'] })}
@@ -433,7 +433,7 @@ export const AdminPanel: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-500 mb-1">Price ($ USD)</label>
+                      <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-300 mb-1">Price ($ USD)</label>
                       <input
                         type="number"
                         step="0.05"
@@ -444,7 +444,7 @@ export const AdminPanel: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-500 mb-1">Spicy Level (0-3)</label>
+                      <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-300 mb-1">Spicy Level (0-3)</label>
                       <select
                         value={menuForm.spicyLevel}
                         onChange={(e) => setMenuForm({ ...menuForm, spicyLevel: parseInt(e.target.value) as MenuItem['spicyLevel'] })}
@@ -457,7 +457,7 @@ export const AdminPanel: React.FC = () => {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-500 mb-1">Availability</label>
+                      <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-300 mb-1">Availability</label>
                       <select
                         value={menuForm.available ? 'true' : 'false'}
                         onChange={(e) => setMenuForm({ ...menuForm, available: e.target.value === 'true' })}
@@ -470,7 +470,7 @@ export const AdminPanel: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-500 mb-1">Recipe Description</label>
+                    <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-300 mb-1">Recipe Description</label>
                     <textarea
                       required
                       value={menuForm.description}
@@ -482,7 +482,7 @@ export const AdminPanel: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-500 mb-1">Ingredients (Comma separated)</label>
+                      <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-300 mb-1">Ingredients (Comma separated)</label>
                       <input
                         type="text"
                         value={menuForm.ingredients.join(', ')}
@@ -492,7 +492,7 @@ export const AdminPanel: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-500 mb-1">Tags (Comma separated)</label>
+                      <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-300 mb-1">Tags (Comma separated)</label>
                       <input
                         type="text"
                         value={menuForm.tags.join(', ')}
@@ -504,7 +504,7 @@ export const AdminPanel: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-wider text-zinc-500 mb-1">Premium Styling Image URL</label>
+                    <label className="block text-sm font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-300 mb-1">Premium Styling Image URL</label>
                     <input
                       type="url"
                       required
@@ -536,14 +536,14 @@ export const AdminPanel: React.FC = () => {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2">
                         <h5 className="font-semibold text-zinc-200 text-sm truncate">{item.name}</h5>
-                        <span className="text-[9px] font-mono text-zinc-500 bg-zinc-950 px-1 py-0.2 rounded uppercase">
+                        <span className="text-[9px] font-mono text-zinc-300 bg-zinc-950 px-1 py-0.2 rounded uppercase">
                           {item.category}
                         </span>
                       </div>
-                      <p className="text-xs text-zinc-500 font-mono mt-0.5">${item.price.toFixed(2)}</p>
+                      <p className="text-xs text-zinc-300 font-mono mt-0.5">${item.price.toFixed(2)}</p>
                       <div className="flex items-center gap-2 mt-1.5">
                         <span className={`w-1.5 h-1.5 rounded-full ${item.available ? 'bg-agave-400' : 'bg-red-500'}`} />
-                        <span className="text-[10px] text-zinc-400 font-mono">
+                        <span className="text-xs font-semibold tracking-wider text-zinc-400 font-mono">
                           {item.available ? 'In Stock' : 'Sold Out'}
                         </span>
                       </div>
@@ -559,7 +559,7 @@ export const AdminPanel: React.FC = () => {
                       </button>
                       <button
                         onClick={() => handleDeleteMenu(item.id)}
-                        className="p-1.5 border border-zinc-800 text-zinc-500 hover:text-chipotle-400 rounded hover:bg-zinc-900 transition-colors cursor-pointer"
+                        className="p-1.5 border border-zinc-800 text-zinc-300 hover:text-chipotle-400 rounded hover:bg-zinc-900 transition-colors cursor-pointer"
                         title="Delete product"
                       >
                         <Trash2 className="w-3.5 h-3.5" />
@@ -576,13 +576,13 @@ export const AdminPanel: React.FC = () => {
             <div className="space-y-6">
               <div className="space-y-1">
                 <h4 className="font-display text-lg text-white font-medium">High-Ticket Lead Pipeline</h4>
-                <p className="text-zinc-500 text-xs">Manage submissions, budget sizes, and clients directly.</p>
+                <p className="text-zinc-300 text-xs">Manage submissions, budget sizes, and clients directly.</p>
               </div>
 
               {cateringLeads.length === 0 ? (
                 <div className="py-12 text-center border border-dashed border-zinc-850 rounded-2xl">
                   <ClipboardList className="w-10 h-10 text-zinc-700 mx-auto" />
-                  <p className="text-zinc-500 text-xs font-mono mt-3">No catering commissions registered yet.</p>
+                  <p className="text-zinc-300 text-xs font-mono mt-3">No catering commissions registered yet.</p>
                 </div>
               ) : (
                 <div className="space-y-4">
@@ -612,7 +612,7 @@ export const AdminPanel: React.FC = () => {
 
                         {/* Status Select */}
                         <div className="flex items-center gap-2">
-                          <span className="text-[10px] font-mono text-zinc-500 uppercase font-bold">Logistics Status:</span>
+                          <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase font-bold">Logistics Status:</span>
                           <select
                             value={lead.status}
                             onChange={(e) => handleLeadStatusChange(lead.id, e.target.value as CateringLead['status'])}
@@ -630,27 +630,27 @@ export const AdminPanel: React.FC = () => {
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono text-zinc-400">
                         <div className="space-y-1">
                           <div className="flex items-center gap-1.5">
-                            <Mail className="w-3.5 h-3.5 text-zinc-500" />
+                            <Mail className="w-3.5 h-3.5 text-zinc-300" />
                             <a href={`mailto:${lead.email}`} className="hover:text-agave-400 underline">{lead.email}</a>
                           </div>
                           <div className="flex items-center gap-1.5">
-                            <Phone className="w-3.5 h-3.5 text-zinc-500" />
+                            <Phone className="w-3.5 h-3.5 text-zinc-300" />
                             <a href={`tel:${lead.phone}`} className="hover:text-agave-400 underline">{lead.phone}</a>
                           </div>
                         </div>
 
                         <div className="space-y-1">
                           <div className="flex items-center gap-1.5">
-                            <Calendar className="w-3.5 h-3.5 text-zinc-500" />
+                            <Calendar className="w-3.5 h-3.5 text-zinc-300" />
                             <span>Target Date: <strong className="text-zinc-200">{lead.date}</strong></span>
                           </div>
                           <div className="flex items-center gap-1.5">
-                            <Users className="w-3.5 h-3.5 text-zinc-500" />
+                            <Users className="w-3.5 h-3.5 text-zinc-300" />
                             <span>Heads: <strong className="text-zinc-200">{lead.guestCount} guest</strong></span>
                           </div>
                         </div>
 
-                        <div className="text-[10px] font-sans text-zinc-500 leading-relaxed italic bg-obsidian p-2 rounded-xl border border-zinc-900 md:col-span-3">
+                        <div className="text-xs font-semibold tracking-wider font-sans text-zinc-300 leading-relaxed italic bg-obsidian p-2 rounded-xl border border-zinc-900 md:col-span-3">
                           "{lead.details}"
                         </div>
                       </div>
@@ -666,20 +666,20 @@ export const AdminPanel: React.FC = () => {
             <div className="space-y-6">
               <div className="space-y-1">
                 <h4 className="font-display text-lg text-white font-medium">VIP Dispatch Subscribers</h4>
-                <p className="text-zinc-500 text-xs">Manage your list of subscribed customer emails for upcoming spot broadcasts.</p>
+                <p className="text-zinc-300 text-xs">Manage your list of subscribed customer emails for upcoming spot broadcasts.</p>
               </div>
 
               {(newsletterSubscribers || []).length === 0 ? (
                 <div className="py-12 text-center border border-dashed border-zinc-850 rounded-2xl">
                   <Mail className="w-10 h-10 text-zinc-700 mx-auto" />
-                  <p className="text-zinc-500 text-xs font-mono mt-3">No registered VIP members yet.</p>
+                  <p className="text-zinc-300 text-xs font-mono mt-3">No registered VIP members yet.</p>
                 </div>
               ) : (
                 <div className="border border-zinc-850 rounded-2xl bg-charcoal overflow-hidden">
                   <div className="overflow-x-auto">
                     <table className="w-full text-left border-collapse text-xs">
                       <thead>
-                        <tr className="border-b border-zinc-850/60 bg-obsidian text-zinc-400 font-mono text-[10px] tracking-wider uppercase">
+                        <tr className="border-b border-zinc-850/60 bg-obsidian text-zinc-400 font-mono text-xs font-semibold tracking-wider tracking-wider uppercase">
                           <th className="p-4 font-semibold">Subscriber</th>
                           <th className="p-4 font-semibold">Subscribed Date</th>
                           <th className="p-4 font-semibold">Status</th>
@@ -692,7 +692,7 @@ export const AdminPanel: React.FC = () => {
                           <tr key={sub.id} className="hover:bg-zinc-900/40 transition-colors">
                             <td className="p-4">
                               <div className="font-sans font-medium text-white">{sub.name || 'Anonymous Club Member'}</div>
-                              <div className="font-mono text-zinc-500 text-[11px] mt-0.5">{sub.email}</div>
+                              <div className="font-mono text-zinc-300 text-xs font-semibold mt-0.5">{sub.email}</div>
                             </td>
                             <td className="p-4 font-mono text-zinc-400">
                               {new Date(sub.subscribedAt).toLocaleDateString(undefined, {
@@ -704,7 +704,7 @@ export const AdminPanel: React.FC = () => {
                               })}
                             </td>
                             <td className="p-4">
-                              <span className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider ${
+                              <span className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold tracking-wider font-mono font-bold uppercase tracking-wider ${
                                 sub.status === 'Active' 
                                   ? 'bg-emerald-950/40 border border-emerald-900/30 text-emerald-400' 
                                   : 'bg-zinc-900 border border-zinc-800 text-zinc-450'
@@ -713,7 +713,7 @@ export const AdminPanel: React.FC = () => {
                                 {sub.status}
                               </span>
                             </td>
-                            <td className="p-4 font-sans text-zinc-500 text-[11px]">
+                            <td className="p-4 font-sans text-zinc-300 text-xs font-semibold">
                               {sub.source || 'General Registry'}
                             </td>
                             <td className="p-4 text-right">
@@ -722,7 +722,7 @@ export const AdminPanel: React.FC = () => {
                                   deleteNewsletterSubscriber(sub.id);
                                   showToast('VIP Subscriber removed.');
                                 }}
-                                className="px-2.5 py-1 text-[10px] font-mono font-bold bg-zinc-900/60 hover:bg-chipotle-950/40 border border-zinc-800 hover:border-chipotle-900/40 text-zinc-450 hover:text-chipotle-400 rounded-md transition-all cursor-pointer"
+                                className="px-2.5 py-1 text-xs font-semibold tracking-wider font-mono font-bold bg-zinc-900/60 hover:bg-chipotle-950/40 border border-zinc-800 hover:border-chipotle-900/40 text-zinc-450 hover:text-chipotle-400 rounded-md transition-all cursor-pointer"
                               >
                                 Remove
                               </button>

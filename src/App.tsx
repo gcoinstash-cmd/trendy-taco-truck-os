@@ -53,7 +53,7 @@ function LandingPage() {
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8 text-xs font-mono font-bold uppercase tracking-widest text-zinc-500">
+          <nav className="hidden md:flex items-center gap-8 text-xs font-mono font-bold uppercase tracking-widest text-zinc-300">
             <button onClick={() => handleScrollTo('digital-menu')} className="hover:text-white transition-colors cursor-pointer">
               Catalog
             </button>
@@ -75,7 +75,7 @@ function LandingPage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-agave-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-agave-400"></span>
               </span>
-              <span className="font-mono text-[10px] font-bold text-zinc-300 uppercase tracking-wider group-hover:text-white transition-colors">
+              <span className="font-mono text-xs font-semibold tracking-wider font-bold text-zinc-300 uppercase tracking-wider group-hover:text-white transition-colors">
                 {truckLocation.status === 'Live' ? 'Live Now' : truckLocation.status}
               </span>
             </div>
@@ -108,7 +108,7 @@ function LandingPage() {
               <span>Tonight's Spot:</span>
               <strong className="text-zinc-200 font-semibold">{truckLocation.spotName}</strong>
               <span className="text-zinc-600">|</span>
-              <span className="text-[11px] text-agave-400 font-medium">{truckLocation.hours}</span>
+              <span className="text-xs font-semibold text-agave-400 font-medium">{truckLocation.hours}</span>
             </div>
 
             {/* Title display */}
@@ -118,7 +118,7 @@ function LandingPage() {
                 Gritty Soul.<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-400 to-zinc-600">Ultra Premium.</span>
               </h1>
-              <p className="text-zinc-500 text-base sm:text-lg max-w-xl leading-relaxed">
+              <p className="text-zinc-300 text-base sm:text-lg max-w-xl leading-relaxed">
                 We craft with stone-ground heirloom blue corn, 12-hour mesquite coals, and organic agave distillates. Street ritual met by culinary masterclass.
               </p>
             </div>
@@ -138,12 +138,12 @@ function LandingPage() {
                 className="border border-zinc-800 hover:border-zinc-700 text-zinc-300 font-bold font-mono text-xs uppercase tracking-wider rounded-xl py-3.5 px-5 flex items-center gap-1.5 transition-all cursor-pointer"
               >
                 Explore Catalog
-                <ArrowUpRight className="w-4 h-4 text-zinc-500" />
+                <ArrowUpRight className="w-4 h-4 text-zinc-300" />
               </button>
             </div>
 
             {/* Premium Trust Accents */}
-            <div className="pt-8 border-t border-zinc-900 grid grid-cols-3 gap-6 max-w-lg text-xs font-mono text-zinc-500 uppercase tracking-widest">
+            <div className="pt-8 border-t border-zinc-900 grid grid-cols-3 gap-6 max-w-lg text-xs font-mono text-zinc-300 uppercase tracking-widest">
               <div>
                 <span className="text-white font-bold text-base block font-display">100%</span>
                 Stone-Ground Masa
@@ -174,13 +174,13 @@ function LandingPage() {
                 {/* Visual Accent Card over image */}
                 <div className="absolute bottom-6 left-6 right-6 bg-charcoal/90 backdrop-blur-md border border-zinc-800 p-4 rounded-xl space-y-1">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-mono text-agave-400 font-bold uppercase tracking-widest flex items-center gap-1">
+                    <span className="text-xs font-semibold tracking-wider font-mono text-agave-400 font-bold uppercase tracking-widest flex items-center gap-1">
                       <Award className="w-3.5 h-3.5" /> Chef Selected
                     </span>
-                    <span className="text-[11px] font-mono text-zinc-400 font-bold">$6.50 / Taco</span>
+                    <span className="text-xs font-semibold font-mono text-zinc-400 font-bold">$6.50 / Taco</span>
                   </div>
                   <h4 className="font-display font-medium text-lg text-white">Chipotle Birria de Res</h4>
-                  <p className="text-[11px] text-zinc-500"> Blue corn tortilla, melted Oaxacan cheese, consommé dip.</p>
+                  <p className="text-xs font-semibold text-zinc-300"> Blue corn tortilla, melted Oaxacan cheese, consommé dip.</p>
                 </div>
               </div>
             </div>
@@ -191,7 +191,7 @@ function LandingPage() {
                 <Compass className="w-5 h-5 animate-spin-slow" />
               </div>
               <div>
-                <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">Operational Stream</span>
+                <span className="text-[9px] font-mono text-zinc-300 uppercase tracking-widest block">Operational Stream</span>
                 <span className="text-xs font-semibold text-zinc-200">Broadcast Coords Live</span>
               </div>
             </div>
@@ -203,7 +203,7 @@ function LandingPage() {
       {/* Brand Manifesto / Philosophy Banner */}
       <section className="py-20 border-b border-zinc-900 bg-charcoal/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
-          <span className="font-mono text-xs text-zinc-500 uppercase tracking-[0.25em] font-bold block">
+          <span className="font-mono text-xs text-zinc-300 uppercase tracking-[0.25em] font-bold block">
             HEIRLOOM MESA MANIFESTO
           </span>
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-zinc-100 font-medium leading-relaxed tracking-tight max-w-3xl mx-auto">
@@ -230,14 +230,14 @@ function LandingPage() {
                 Live Telemetry Feed
               </span>
               <h3 className="font-display font-medium text-3xl text-white mt-1">Satellite Positioner.</h3>
-              <p className="text-zinc-500 text-sm mt-1 max-w-md">Our active location, hours, and operational status are updated in real-time by our drivers.</p>
+              <p className="text-zinc-300 text-sm mt-1 max-w-md">Our active location, hours, and operational status are updated in real-time by our drivers.</p>
             </div>
 
             <div className="bg-charcoal border border-zinc-850 p-4 rounded-xl flex items-center gap-4 max-w-md">
               <div className="w-8 h-8 rounded-lg bg-zinc-900 flex items-center justify-center text-agave-400">
                 <Activity className="w-4 h-4 animate-pulse" />
               </div>
-              <p className="text-xs text-zinc-500 leading-normal">
+              <p className="text-xs text-zinc-300 leading-normal">
                 Want us to park at your office or gallery launch? Head down to the event commission ledger to book.
               </p>
             </div>
@@ -259,7 +259,7 @@ function LandingPage() {
               <h3 className="font-display font-medium text-4xl text-white tracking-tight leading-[0.95]">
                 Luxury Catering &amp; Corporate Galas.
               </h3>
-              <p className="text-zinc-500 text-sm leading-relaxed">
+              <p className="text-zinc-300 text-sm leading-relaxed">
                 Bring our acclaimed street setup directly to your private estate, gallery vernissage, or corporate headquarters. We customize menu profiles, package custom visual design labels, and bring our mesquite-charcoal grills directly to you.
               </p>
             </div>
@@ -272,7 +272,7 @@ function LandingPage() {
                 </div>
                 <div>
                   <h5 className="font-semibold text-zinc-200 text-sm">Bespoke Gastronomy Curation</h5>
-                  <p className="text-zinc-500 text-xs mt-0.5">Custom allergen profiles, ingredient requests, and off-catalog releases.</p>
+                  <p className="text-zinc-300 text-xs mt-0.5">Custom allergen profiles, ingredient requests, and off-catalog releases.</p>
                 </div>
               </div>
 
@@ -282,7 +282,7 @@ function LandingPage() {
                 </div>
                 <div>
                   <h5 className="font-semibold text-zinc-200 text-sm">Visual Identity Customization</h5>
-                  <p className="text-zinc-500 text-xs mt-0.5">Personalized paper wraps, menu screens, and custom mocktail formulations.</p>
+                  <p className="text-zinc-300 text-xs mt-0.5">Personalized paper wraps, menu screens, and custom mocktail formulations.</p>
                 </div>
               </div>
 
@@ -292,14 +292,14 @@ function LandingPage() {
                 </div>
                 <div>
                   <h5 className="font-semibold text-zinc-200 text-sm">Full Cleanup &amp; Zero Friction</h5>
-                  <p className="text-zinc-500 text-xs mt-0.5">Our culinary team handles everything from setup to cleanup so you focus on hosting.</p>
+                  <p className="text-zinc-300 text-xs mt-0.5">Our culinary team handles everything from setup to cleanup so you focus on hosting.</p>
                 </div>
               </div>
             </div>
 
             {/* High Ticket Value Proof Card */}
             <div className="bg-charcoal border border-zinc-850 p-6 rounded-2xl space-y-3">
-              <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block font-bold">COMMISSION TERMS</span>
+              <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest block font-bold">COMMISSION TERMS</span>
               <p className="text-zinc-400 text-xs leading-relaxed">
                 We accept commissions across Los Angeles county with minimum guest budgets starting at <strong className="text-white">$1,200</strong>. Secure dates early; peak weekend slots fill up to 3 months in advance.
               </p>
@@ -337,7 +337,7 @@ function LandingPage() {
           <VIPNewsletter />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 text-sm text-zinc-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 text-sm text-zinc-300">
           
           {/* Brand Col */}
           <div className="space-y-4 md:col-span-2">
@@ -347,10 +347,10 @@ function LandingPage() {
               </div>
               <span className="font-display font-bold text-base text-white tracking-tight">AGAVE &amp; MESA</span>
             </div>
-            <p className="text-xs text-zinc-500 max-w-sm leading-relaxed">
+            <p className="text-xs text-zinc-300 max-w-sm leading-relaxed">
               Acclaimed luxury-editorial street gastronomy truck &amp; private event commission portal. Crafting raw elegance since 2024.
             </p>
-            <p className="text-[10px] font-mono text-zinc-600">
+            <p className="text-xs font-semibold tracking-wider font-mono text-zinc-600">
               © 2026 Agave &amp; Mesa Culinary Group. All rights reserved.
             </p>
           </div>
@@ -368,7 +368,7 @@ function LandingPage() {
           {/* Sales pitches Col */}
           <div className="space-y-3">
             <h5 className="font-mono text-xs uppercase tracking-wider text-zinc-400 font-bold">Developer Licence</h5>
-            <ul className="space-y-2 text-[11px] leading-relaxed">
+            <ul className="space-y-2 text-xs font-semibold leading-relaxed">
               <li>
                 <span className="text-zinc-400 font-bold">Gumroad Price Tag:</span> $99+ Commercial Template
               </li>

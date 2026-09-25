@@ -157,7 +157,7 @@ export const CateringWizard: React.FC = () => {
           {/* Wizard Header Progress Bar */}
           <div className="mb-8">
             <div className="flex justify-between items-center mb-3">
-              <span className="font-mono text-xs uppercase tracking-widest text-zinc-500">
+              <span className="font-mono text-xs uppercase tracking-widest text-zinc-300">
                 Event Commission Portal
               </span>
               <span className="font-mono text-xs text-agave-400 font-bold bg-agave-950/40 border border-agave-900/40 px-2 py-0.5 rounded">
@@ -186,12 +186,12 @@ export const CateringWizard: React.FC = () => {
               >
                 <div>
                   <h3 className="font-display font-medium text-2xl text-white">Let's craft the atmosphere.</h3>
-                  <p className="text-zinc-500 text-sm mt-1">Please introduce yourself and your contact coordinates.</p>
+                  <p className="text-zinc-300 text-sm mt-1">Please introduce yourself and your contact coordinates.</p>
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-xs font-mono uppercase text-zinc-400 tracking-wider mb-2">Your Name</label>
+                    <label className="block text-sm font-semibold font-mono uppercase text-zinc-400 tracking-wider mb-2">Your Name</label>
                     <input 
                       type="text" 
                       name="name"
@@ -199,13 +199,13 @@ export const CateringWizard: React.FC = () => {
                       value={formData.name}
                       onChange={handleTextChange}
                       placeholder="e.g. Sterling Draper"
-                      className="w-full bg-obsidian border border-zinc-850 focus:border-agave-500 rounded-xl px-4 py-3 text-sm text-zinc-200 placeholder-zinc-600 outline-none transition-colors"
+                      className="w-full bg-obsidian border border-zinc-850 focus:border-agave-500 rounded-xl px-4 py-3 text-base min-h-[44px] text-zinc-200 placeholder-zinc-600 outline-none transition-colors"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-mono uppercase text-zinc-400 tracking-wider mb-2">Email Address</label>
+                      <label className="block text-sm font-semibold font-mono uppercase text-zinc-400 tracking-wider mb-2">Email Address</label>
                       <input 
                         type="email" 
                         name="email"
@@ -213,11 +213,11 @@ export const CateringWizard: React.FC = () => {
                         value={formData.email}
                         onChange={handleTextChange}
                         placeholder="sterling@events.co"
-                        className="w-full bg-obsidian border border-zinc-850 focus:border-agave-500 rounded-xl px-4 py-3 text-sm text-zinc-200 placeholder-zinc-600 outline-none transition-colors"
+                        className="w-full bg-obsidian border border-zinc-850 focus:border-agave-500 rounded-xl px-4 py-3 text-base min-h-[44px] text-zinc-200 placeholder-zinc-600 outline-none transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-mono uppercase text-zinc-400 tracking-wider mb-2">Phone Number</label>
+                      <label className="block text-sm font-semibold font-mono uppercase text-zinc-400 tracking-wider mb-2">Phone Number</label>
                       <input 
                         type="tel" 
                         name="phone"
@@ -225,7 +225,7 @@ export const CateringWizard: React.FC = () => {
                         value={formData.phone}
                         onChange={handleTextChange}
                         placeholder="(213) 555-0100"
-                        className="w-full bg-obsidian border border-zinc-850 focus:border-agave-500 rounded-xl px-4 py-3 text-sm text-zinc-200 placeholder-zinc-600 outline-none transition-colors"
+                        className="w-full bg-obsidian border border-zinc-850 focus:border-agave-500 rounded-xl px-4 py-3 text-base min-h-[44px] text-zinc-200 placeholder-zinc-600 outline-none transition-colors"
                       />
                     </div>
                   </div>
@@ -256,13 +256,13 @@ export const CateringWizard: React.FC = () => {
               >
                 <div>
                   <h3 className="font-display font-medium text-2xl text-white">Logistics & Scale.</h3>
-                  <p className="text-zinc-500 text-sm mt-1">Define the date and crowd size for the catering commission.</p>
+                  <p className="text-zinc-300 text-sm mt-1">Define the date and crowd size for the catering commission.</p>
                 </div>
 
                 <div className="space-y-5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-mono uppercase text-zinc-400 tracking-wider mb-2 flex items-center gap-1.5">
+                      <label className="block text-sm font-semibold font-mono uppercase text-zinc-400 tracking-wider mb-2 flex items-center gap-1.5">
                         <Calendar className="w-3.5 h-3.5 text-agave-400" />
                         Target Date
                       </label>
@@ -273,12 +273,12 @@ export const CateringWizard: React.FC = () => {
                         min={new Date().toISOString().split('T')[0]}
                         value={formData.date}
                         onChange={handleTextChange}
-                        className="w-full bg-obsidian border border-zinc-850 focus:border-agave-500 rounded-xl px-4 py-3 text-sm text-zinc-200 outline-none transition-colors scheme-dark"
+                        className="w-full bg-obsidian border border-zinc-850 focus:border-agave-500 rounded-xl px-4 py-3 text-base min-h-[44px] text-zinc-200 outline-none transition-colors scheme-dark"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase text-zinc-400 tracking-wider mb-2 flex items-center justify-between">
+                      <label className="block text-sm font-semibold font-mono uppercase text-zinc-400 tracking-wider mb-2 flex items-center justify-between">
                         <span className="flex items-center gap-1.5">
                           <Users className="w-3.5 h-3.5 text-agave-400" />
                           Guest Count
@@ -301,7 +301,7 @@ export const CateringWizard: React.FC = () => {
 
                   {/* Menu Tier Select Cards */}
                   <div>
-                    <label className="block text-xs font-mono uppercase text-zinc-400 tracking-wider mb-3">
+                    <label className="block text-sm font-semibold font-mono uppercase text-zinc-400 tracking-wider mb-3">
                       Select Gastronomy Tier
                     </label>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -314,11 +314,11 @@ export const CateringWizard: React.FC = () => {
                             : 'bg-obsidian border-zinc-850 hover:border-zinc-750'
                         }`}
                       >
-                        <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 block">Tier I</span>
+                        <span className="text-xs font-mono uppercase tracking-wider text-zinc-300 block">Tier I</span>
                         <h4 className="font-semibold text-zinc-200 mt-1">Street Ritual</h4>
-                        <p className="text-[11px] text-zinc-500 mt-1">Classic wood-grilled tacos & artisanal side dishes.</p>
+                        <p className="text-xs font-semibold text-zinc-300 mt-1">Classic wood-grilled tacos & artisanal side dishes.</p>
                         <div className="mt-3 text-sm font-bold text-white font-mono">
-                          ${TIER_RATES.essential_street} <span className="text-[10px] text-zinc-500 font-normal">/ head</span>
+                          ${TIER_RATES.essential_street} <span className="text-xs font-semibold tracking-wider text-zinc-300 font-normal">/ head</span>
                         </div>
                       </div>
 
@@ -334,11 +334,11 @@ export const CateringWizard: React.FC = () => {
                         <div className="absolute -top-2 right-3 bg-agave-500 text-black text-[8px] font-mono font-bold tracking-widest px-1.5 py-0.5 rounded uppercase">
                           Popular
                         </div>
-                        <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 block">Tier II</span>
+                        <span className="text-xs font-mono uppercase tracking-wider text-zinc-300 block">Tier II</span>
                         <h4 className="font-semibold text-zinc-200 mt-1">Signature Feast</h4>
-                        <p className="text-[11px] text-zinc-500 mt-1">Full access to regular menu + custom mocktails & specials.</p>
+                        <p className="text-xs font-semibold text-zinc-300 mt-1">Full access to regular menu + custom mocktails & specials.</p>
                         <div className="mt-3 text-sm font-bold text-white font-mono">
-                          ${TIER_RATES.full_experience} <span className="text-[10px] text-zinc-500 font-normal">/ head</span>
+                          ${TIER_RATES.full_experience} <span className="text-xs font-semibold tracking-wider text-zinc-300 font-normal">/ head</span>
                         </div>
                       </div>
 
@@ -351,11 +351,11 @@ export const CateringWizard: React.FC = () => {
                             : 'bg-obsidian border-zinc-850 hover:border-zinc-750'
                         }`}
                       >
-                        <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 block">Tier III</span>
+                        <span className="text-xs font-mono uppercase tracking-wider text-zinc-300 block">Tier III</span>
                         <h4 className="font-semibold text-zinc-200 mt-1">Reserve VIP</h4>
-                        <p className="text-[11px] text-zinc-500 mt-1">Seafood prawns, black truffle elotes, and personal service.</p>
+                        <p className="text-xs font-semibold text-zinc-300 mt-1">Seafood prawns, black truffle elotes, and personal service.</p>
                         <div className="mt-3 text-sm font-bold text-white font-mono">
-                          ${TIER_RATES.luxury_reserve} <span className="text-[10px] text-zinc-500 font-normal">/ head</span>
+                          ${TIER_RATES.luxury_reserve} <span className="text-xs font-semibold tracking-wider text-zinc-300 font-normal">/ head</span>
                         </div>
                       </div>
                     </div>
@@ -395,14 +395,14 @@ export const CateringWizard: React.FC = () => {
               >
                 <div>
                   <h3 className="font-display font-medium text-2xl text-white">Culinary Customization & Valuation</h3>
-                  <p className="text-zinc-500 text-sm mt-1">Elevate the event with optional upgrades and review the dynamic quote.</p>
+                  <p className="text-zinc-300 text-sm mt-1">Elevate the event with optional upgrades and review the dynamic quote.</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                   {/* Left Column: Upgrades & Details */}
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-xs font-mono uppercase text-zinc-400 tracking-wider mb-2">Enhance Experience</label>
+                      <label className="block text-sm font-semibold font-mono uppercase text-zinc-400 tracking-wider mb-2">Enhance Experience</label>
                       <div className="space-y-2">
                         {/* Addon 1 */}
                         <div 
@@ -415,7 +415,7 @@ export const CateringWizard: React.FC = () => {
                         >
                           <div>
                             <span className="text-xs font-semibold text-zinc-200 block">Unlimited Agua Frescas</span>
-                            <span className="text-[10px] text-zinc-500">Hibiscus mint cold-brews for everyone.</span>
+                            <span className="text-xs font-semibold tracking-wider text-zinc-300">Hibiscus mint cold-brews for everyone.</span>
                           </div>
                           <span className="font-mono text-xs font-bold text-white">+${ADDON_RATES.unlimited_refresca}/head</span>
                         </div>
@@ -431,7 +431,7 @@ export const CateringWizard: React.FC = () => {
                         >
                           <div>
                             <span className="text-xs font-semibold text-zinc-200 block">Warm Churros Station</span>
-                            <span className="text-[10px] text-zinc-500">With cajeta caramel dip on-site.</span>
+                            <span className="text-xs font-semibold tracking-wider text-zinc-300">With cajeta caramel dip on-site.</span>
                           </div>
                           <span className="font-mono text-xs font-bold text-white">+${ADDON_RATES.dessert_churros}/head</span>
                         </div>
@@ -447,7 +447,7 @@ export const CateringWizard: React.FC = () => {
                         >
                           <div>
                             <span className="text-xs font-semibold text-zinc-200 block">Extended Hour (Late Night)</span>
-                            <span className="text-[10px] text-zinc-500">Extend truck duration past midnight.</span>
+                            <span className="text-xs font-semibold tracking-wider text-zinc-300">Extend truck duration past midnight.</span>
                           </div>
                           <span className="font-mono text-xs font-bold text-white">+${ADDON_RATES.late_night_hour} Flat</span>
                         </div>
@@ -455,14 +455,14 @@ export const CateringWizard: React.FC = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase text-zinc-400 tracking-wider mb-2">Special Accommodations</label>
+                      <label className="block text-sm font-semibold font-mono uppercase text-zinc-400 tracking-wider mb-2">Special Accommodations</label>
                       <textarea 
                         name="details"
                         rows={2}
                         value={formData.details}
                         onChange={handleTextChange}
                         placeholder="Allergies, visual setups, custom branding stickers, gate codes..."
-                        className="w-full bg-obsidian border border-zinc-850 focus:border-agave-500 rounded-xl px-4 py-3 text-sm text-zinc-200 placeholder-zinc-600 outline-none transition-colors resize-none"
+                        className="w-full bg-obsidian border border-zinc-850 focus:border-agave-500 rounded-xl px-4 py-3 text-base min-h-[44px] text-zinc-200 placeholder-zinc-600 outline-none transition-colors resize-none"
                       />
                     </div>
                   </div>
@@ -481,7 +481,7 @@ export const CateringWizard: React.FC = () => {
                           <span className="text-zinc-200">${(TIER_RATES[formData.menuTier] * formData.guestCount).toLocaleString()}</span>
                         </div>
                         {formData.selectedAddons.map((addon) => (
-                          <div key={addon} className="flex justify-between text-xs text-zinc-500">
+                          <div key={addon} className="flex justify-between text-xs text-zinc-300">
                             <span className="capitalize">{addon.replace(/_/g, ' ')}</span>
                             <span>
                               {addon === 'late_night_hour' 
@@ -502,12 +502,12 @@ export const CateringWizard: React.FC = () => {
 
                     <div className="border-t border-zinc-850 pt-4 mt-auto">
                       <div className="flex justify-between items-baseline mb-2">
-                        <span className="font-mono text-xs uppercase text-zinc-500">Grand Total Estimate</span>
+                        <span className="font-mono text-xs uppercase text-zinc-300">Grand Total Estimate</span>
                         <span className="text-3xl font-display font-medium text-white tracking-tight">
                           ${estimate.total.toLocaleString()}
                         </span>
                       </div>
-                      <p className="text-[10px] text-zinc-500 leading-relaxed font-mono">
+                      <p className="text-xs font-semibold tracking-wider text-zinc-300 leading-relaxed font-mono">
                         *Excludes local sales tax. An administrative booking lock is required to hold targets.
                       </p>
                     </div>
@@ -561,26 +561,26 @@ export const CateringWizard: React.FC = () => {
 
           {/* Receipt display to prove high-end portal value */}
           <div className="max-w-sm mx-auto bg-obsidian border border-zinc-850 rounded-2xl p-5 text-left font-mono space-y-3">
-            <div className="flex justify-between text-xs text-zinc-500 border-b border-zinc-850 pb-2">
+            <div className="flex justify-between text-xs text-zinc-300 border-b border-zinc-850 pb-2">
               <span>REFERENCE CODE</span>
               <span className="text-zinc-300 font-bold">TC-{Math.floor(100000 + Math.random() * 900000)}</span>
             </div>
             
             <div className="space-y-1 text-xs">
               <div className="flex justify-between">
-                <span className="text-zinc-500">CLIENT</span>
+                <span className="text-zinc-300">CLIENT</span>
                 <span className="text-zinc-300 truncate max-w-[180px]">{formData.name}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-zinc-500">TARGET DATE</span>
+                <span className="text-zinc-300">TARGET DATE</span>
                 <span className="text-zinc-300">{formData.date}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-zinc-500">ATTENDEES</span>
+                <span className="text-zinc-300">ATTENDEES</span>
                 <span className="text-zinc-300">{formData.guestCount} head</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-zinc-500">STYLE TIER</span>
+                <span className="text-zinc-300">STYLE TIER</span>
                 <span className="text-zinc-300 capitalize">{formData.menuTier.replace(/_/g, ' ')}</span>
               </div>
             </div>
@@ -607,7 +607,7 @@ export const CateringWizard: React.FC = () => {
                 selectedAddons: [],
               });
             }}
-            className="text-zinc-500 hover:text-zinc-300 text-xs font-mono underline transition-colors cursor-pointer"
+            className="text-zinc-300 hover:text-zinc-300 text-xs font-mono underline transition-colors cursor-pointer"
           >
             Submit Another Booking Request
           </button>
@@ -641,7 +641,7 @@ export const CateringWizard: React.FC = () => {
               {/* Close Button */}
               <button
                 onClick={() => setShowSuccessModal(false)}
-                className="absolute top-4 right-4 p-1.5 rounded-lg bg-zinc-900/60 hover:bg-zinc-850 border border-zinc-800 hover:border-zinc-700 text-zinc-500 hover:text-white transition-all cursor-pointer"
+                className="absolute top-4 right-4 p-1.5 rounded-lg bg-zinc-900/60 hover:bg-zinc-850 border border-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white transition-all cursor-pointer"
                 aria-label="Close"
               >
                 <X className="w-4 h-4" />
@@ -714,7 +714,7 @@ export const CateringWizard: React.FC = () => {
 
               {/* Title & Description */}
               <div className="space-y-2">
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950/40 border border-emerald-900/30 text-emerald-400 text-[10px] font-mono font-semibold tracking-wider uppercase">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950/40 border border-emerald-900/30 text-emerald-400 text-xs font-semibold tracking-wider font-mono font-semibold tracking-wider uppercase">
                   <Flame className="w-3 h-3 text-emerald-400" />
                   Catering Ledger Committed
                 </div>
@@ -729,10 +729,10 @@ export const CateringWizard: React.FC = () => {
               {/* Compact Ledger Summary Plate */}
               <div className="bg-zinc-900 border border-zinc-850 rounded-2xl p-4 text-left font-mono space-y-2 text-xs">
                 <div className="flex justify-between border-b border-zinc-850/60 pb-2">
-                  <span className="text-zinc-500 uppercase text-[10px] font-bold">CLIENT REGISTER</span>
+                  <span className="text-zinc-300 uppercase text-xs font-semibold tracking-wider font-bold">CLIENT REGISTER</span>
                   <span className="text-white font-medium truncate max-w-[150px]">{formData.name || 'Anonymous'}</span>
                 </div>
-                <div className="grid grid-cols-2 gap-2 text-[11px] pt-1 text-zinc-400">
+                <div className="grid grid-cols-2 gap-2 text-xs font-semibold pt-1 text-zinc-400">
                   <div>
                     <span className="text-zinc-600 block text-[9px] font-bold uppercase">Date Target</span>
                     <span className="text-zinc-300 font-medium">{formData.date || 'TBD'}</span>
@@ -743,7 +743,7 @@ export const CateringWizard: React.FC = () => {
                   </div>
                 </div>
                 <div className="border-t border-zinc-850/60 pt-2 flex justify-between items-baseline">
-                  <span className="text-zinc-400 font-bold uppercase text-[10px]">Estimated Total</span>
+                  <span className="text-zinc-400 font-bold uppercase text-xs font-semibold tracking-wider">Estimated Total</span>
                   <span className="text-agave-400 font-bold text-base">${estimate.total.toLocaleString()}</span>
                 </div>
               </div>
@@ -761,7 +761,7 @@ export const CateringWizard: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setShowSuccessModal(false)}
-                  className="w-full py-2.5 bg-zinc-900/40 hover:bg-zinc-800 border border-zinc-850 hover:border-zinc-700 text-zinc-450 hover:text-white font-mono text-[10px] tracking-wider uppercase rounded-xl transition-all cursor-pointer"
+                  className="w-full py-2.5 bg-zinc-900/40 hover:bg-zinc-800 border border-zinc-850 hover:border-zinc-700 text-zinc-450 hover:text-white font-mono text-xs font-semibold tracking-wider tracking-wider uppercase rounded-xl transition-all cursor-pointer"
                 >
                   Continue Browsing
                 </button>

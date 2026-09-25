@@ -44,7 +44,7 @@ export const VIPNewsletter: React.FC = () => {
         
         {/* Pitch text (Left 5 Columns) */}
         <div className="lg:col-span-5 space-y-5">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-agave-950/40 border border-agave-500/20 text-agave-400 text-[10px] font-mono font-semibold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-agave-950/40 border border-agave-500/20 text-agave-400 text-xs font-semibold tracking-wider font-mono font-semibold tracking-wider uppercase">
             <Sparkles className="w-3.5 h-3.5 animate-pulse" />
             VIP Club Dispatch
           </div>
@@ -53,17 +53,17 @@ export const VIPNewsletter: React.FC = () => {
             <h4 className="font-display font-medium text-2xl sm:text-3xl text-white tracking-tight leading-none">
               Receive the dispatch.
             </h4>
-            <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+            <p className="text-zinc-400 text-base font-semibold leading-relaxed">
               Join our private registry to receive real-time SMS &amp; email alerts for sudden street truck locations, unlisted menu tastings, and seasonal gastronomy events across Southern California.
             </p>
           </div>
 
           <div className="space-y-2.5 pt-2 border-t border-zinc-850/60">
-            <div className="flex items-center gap-2.5 text-xs text-zinc-500">
+            <div className="flex items-center gap-2.5 text-xs text-zinc-300">
               <MapPin className="w-4 h-4 text-agave-500/70" />
               <span>Priority access to secret beach &amp; estate pop-ups</span>
             </div>
-            <div className="flex items-center gap-2.5 text-xs text-zinc-500">
+            <div className="flex items-center gap-2.5 text-xs text-zinc-300">
               <Bell className="w-4 h-4 text-chipotle-400/70" />
               <span>Zero spam. Only hand-crafted weekly schedules</span>
             </div>
@@ -86,7 +86,7 @@ export const VIPNewsletter: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name field */}
                   <div className="space-y-1.5">
-                    <label htmlFor="newsletter-name" className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest font-bold block">
+                    <label htmlFor="newsletter-name" className="text-sm font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest font-bold block">
                       YOUR NAME (OPTIONAL)
                     </label>
                     <input
@@ -102,7 +102,7 @@ export const VIPNewsletter: React.FC = () => {
 
                   {/* Email field */}
                   <div className="space-y-1.5">
-                    <label htmlFor="newsletter-email" className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest font-bold block">
+                    <label htmlFor="newsletter-email" className="text-sm font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest font-bold block">
                       EMAIL ADDRESS *
                     </label>
                     <div className="relative">
@@ -130,7 +130,7 @@ export const VIPNewsletter: React.FC = () => {
 
                 {/* Submit action button */}
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-                  <div className="flex items-center gap-2 text-[10px] text-zinc-500 font-mono">
+                  <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-zinc-300 font-mono">
                     <ShieldCheck className="w-4 h-4 text-emerald-500" />
                     <span>Your data is encrypted. Opt-out in 1 click.</span>
                   </div>
@@ -138,7 +138,7 @@ export const VIPNewsletter: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto px-6 py-3 bg-white hover:bg-zinc-200 disabled:bg-zinc-800 text-black disabled:text-zinc-600 font-sans font-semibold text-xs rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer group"
+                    className="w-full sm:w-auto px-6 py-3 bg-white hover:bg-zinc-200 disabled:bg-zinc-800 text-black disabled:text-zinc-600 font-sans font-semibold text-base font-semibold min-h-[44px] rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer group"
                   >
                     {isSubmitting ? 'Registering...' : 'Request Invitation'}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -159,7 +159,7 @@ export const VIPNewsletter: React.FC = () => {
                 
                 <div className="space-y-1.5">
                   <h5 className="font-display font-medium text-lg text-white">Registry request received.</h5>
-                  <p className="text-xs text-zinc-400 max-w-sm leading-relaxed">
+                  <p className="text-base text-zinc-200 leading-relaxed max-w-sm leading-relaxed">
                     Welcome to the Agave &amp; Mesa private dispatch list. We have registered your subscription and will transmit upcoming weekend truck coordinates and early reservation menus soon.
                   </p>
                 </div>
@@ -167,7 +167,7 @@ export const VIPNewsletter: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setIsSubmitted(false)}
-                  className="text-[10px] font-mono text-zinc-500 hover:text-white underline tracking-widest uppercase transition-colors"
+                  className="text-xs font-semibold tracking-wider font-mono text-zinc-300 hover:text-white underline tracking-widest uppercase transition-colors"
                 >
                   Register another email
                 </button>

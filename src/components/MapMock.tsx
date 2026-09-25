@@ -61,10 +61,10 @@ export const MapMock: React.FC<MapMockProps> = ({ location }) => {
       ) : null}
 
       {/* Street Names (Mocking Urban Editorial Vibe) */}
-      <div className="absolute top-10 left-4 text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600 pointer-events-none select-none">
+      <div className="absolute top-10 left-4 text-xs font-semibold tracking-wider font-mono uppercase tracking-[0.2em] text-zinc-600 pointer-events-none select-none">
         3rd Street / Arts District
       </div>
-      <div className="absolute bottom-20 right-6 text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600 pointer-events-none select-none">
+      <div className="absolute bottom-20 right-6 text-xs font-semibold tracking-wider font-mono uppercase tracking-[0.2em] text-zinc-600 pointer-events-none select-none">
         Santa Fe Ave
       </div>
       <div className="absolute top-1/2 left-1/3 text-[9px] font-mono uppercase tracking-[0.15em] text-zinc-700 pointer-events-none select-none -rotate-90">
@@ -97,12 +97,12 @@ export const MapMock: React.FC<MapMockProps> = ({ location }) => {
             <div className="absolute bottom-12 bg-charcoal border border-zinc-800 text-white py-2 px-3 rounded-lg shadow-2xl whitespace-nowrap opacity-100 group-hover/pin:scale-105 transition-transform duration-200">
               <div className="flex items-center gap-2">
                 <span className={`w-2 h-2 rounded-full bg-agave-400 animate-pulse`} />
-                <span className="font-mono text-[10px] font-bold tracking-wider uppercase text-zinc-400">
+                <span className="font-mono text-xs font-semibold tracking-wider font-bold tracking-wider uppercase text-zinc-400">
                   {location.status} Now
                 </span>
               </div>
               <p className="font-display font-medium text-sm mt-0.5">{location.spotName}</p>
-              <p className="text-[10px] text-zinc-500 font-mono mt-0.5">{location.hours}</p>
+              <p className="text-xs font-semibold tracking-wider text-zinc-300 font-mono mt-0.5">{location.hours}</p>
               <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-charcoal border-r border-b border-zinc-800 rotate-45" />
             </div>
 
@@ -122,10 +122,10 @@ export const MapMock: React.FC<MapMockProps> = ({ location }) => {
         </div>
         <div>
           <div className="flex items-center gap-1.5">
-            <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Coordinates</span>
+            <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-wider">Coordinates</span>
             <span className="text-[9px] font-mono text-agave-400 px-1 py-0.2 bg-agave-950/50 rounded border border-agave-900/30">GPS Verified</span>
           </div>
-          <div className="font-mono text-[11px] text-zinc-300 mt-0.5">
+          <div className="font-mono text-xs font-semibold text-zinc-300 mt-0.5">
             {location.latitude.toFixed(4)}° N, {Math.abs(location.longitude).toFixed(4)}° W
           </div>
         </div>
@@ -156,7 +156,7 @@ export const MapMock: React.FC<MapMockProps> = ({ location }) => {
       {/* Bottom Left: Location Footer Display */}
       <div className="absolute bottom-4 left-4 right-16 md:right-32 bg-charcoal/95 backdrop-blur-md border border-zinc-800/80 p-3.5 rounded-xl flex items-center gap-3 shadow-2xl">
         <div className="flex-1 min-w-0">
-          <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">Active Destination</span>
+          <span className="text-[9px] font-mono text-zinc-300 uppercase tracking-widest block">Active Destination</span>
           <h4 className="text-zinc-200 text-sm font-semibold truncate mt-0.5">{location.spotName}</h4>
           <p className="text-zinc-400 text-xs truncate mt-0.5">{location.address}</p>
         </div>

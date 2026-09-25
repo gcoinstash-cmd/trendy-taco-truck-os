@@ -64,7 +64,7 @@ export const Menu: React.FC = () => {
               className={`px-4 py-2 rounded-xl text-xs font-mono font-bold tracking-wider uppercase transition-all duration-150 cursor-pointer ${
                 selectedCategory === cat
                   ? 'bg-white text-black font-semibold shadow-lg'
-                  : 'bg-zinc-950 border border-zinc-850 text-zinc-500 hover:text-zinc-300 hover:border-zinc-750'
+                  : 'bg-zinc-950 border border-zinc-850 text-zinc-300 hover:text-zinc-300 hover:border-zinc-750'
               }`}
             >
               {cat}
@@ -76,7 +76,7 @@ export const Menu: React.FC = () => {
       {loading ? (
         <div className="py-20 text-center">
           <div className="w-10 h-10 border-2 border-agave-500 border-t-transparent rounded-full animate-spin mx-auto" />
-          <p className="text-zinc-500 text-xs font-mono mt-4">Tuning the blue corn griddle...</p>
+          <p className="text-zinc-300 text-xs font-mono mt-4">Tuning the blue corn griddle...</p>
         </div>
       ) : (
         <AnimatePresence mode="wait">
@@ -125,7 +125,7 @@ export const Menu: React.FC = () => {
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-[10px] text-zinc-500 tracking-wider uppercase font-bold">
+                      <span className="font-mono text-xs font-semibold tracking-wider text-zinc-300 tracking-wider uppercase font-bold">
                         {item.category}
                       </span>
                       {item.spicyLevel > 0 && renderSpicyLevel(item.spicyLevel)}
@@ -143,7 +143,7 @@ export const Menu: React.FC = () => {
                     {item.ingredients.slice(0, 3).map((ing) => (
                       <span
                         key={ing}
-                        className="text-[9px] font-mono text-zinc-500 bg-zinc-950 px-1.5 py-0.5 rounded border border-zinc-900"
+                        className="text-[9px] font-mono text-zinc-300 bg-zinc-950 px-1.5 py-0.5 rounded border border-zinc-900"
                       >
                         {ing}
                       </span>
@@ -164,7 +164,7 @@ export const Menu: React.FC = () => {
                       <Info className="w-3.5 h-3.5 text-agave-400" />
                       View Ingredients
                     </button>
-                    <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest flex items-center gap-1">
+                    <span className="text-xs font-semibold tracking-wider font-mono text-zinc-600 uppercase tracking-widest flex items-center gap-1">
                       <Check className="w-3 h-3 text-agave-500" /> Fresh Daily
                     </span>
                   </div>
@@ -215,7 +215,7 @@ export const Menu: React.FC = () => {
               <div className="p-6 md:p-8 space-y-6">
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
-                    <span className="bg-zinc-900 border border-zinc-850 text-[10px] font-mono text-agave-400 px-2 py-0.5 rounded font-bold uppercase">
+                    <span className="bg-zinc-900 border border-zinc-850 text-xs font-semibold tracking-wider font-mono text-agave-400 px-2 py-0.5 rounded font-bold uppercase">
                       {selectedItem.category}
                     </span>
                     {selectedItem.spicyLevel > 0 && renderSpicyLevel(selectedItem.spicyLevel)}
@@ -230,7 +230,7 @@ export const Menu: React.FC = () => {
 
                 {/* Complete Recipe/Ingredients Grid */}
                 <div className="space-y-3">
-                  <h5 className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-bold">
+                  <h5 className="text-xs font-mono uppercase tracking-widest text-zinc-300 font-bold">
                     Heirloom Composition
                   </h5>
                   <div className="grid grid-cols-2 gap-2">
@@ -249,13 +249,13 @@ export const Menu: React.FC = () => {
                 {/* Footer Metadata */}
                 <div className="pt-4 border-t border-zinc-900 flex justify-between items-center">
                   <div>
-                    <span className="text-[10px] font-mono text-zinc-500 block">BASE ESTIMATE</span>
+                    <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 block">BASE ESTIMATE</span>
                     <span className="text-xl font-mono font-bold text-white">${selectedItem.price.toFixed(2)}</span>
                   </div>
                   
                   <div className="flex gap-2">
                     {selectedItem.tags.slice(0, 2).map(tag => (
-                      <span key={tag} className="bg-agave-950/20 border border-agave-900/30 text-[10px] font-mono text-agave-400 py-1 px-2 rounded-md">
+                      <span key={tag} className="bg-agave-950/20 border border-agave-900/30 text-xs font-semibold tracking-wider font-mono text-agave-400 py-1 px-2 rounded-md">
                         {tag}
                       </span>
                     ))}

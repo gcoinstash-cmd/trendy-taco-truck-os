@@ -59,16 +59,16 @@ export const EventLogisticsFAQ: React.FC = () => {
     <div id="event-logistics-faq" className="mt-16 pt-16 border-t border-zinc-900 space-y-8">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <span className="font-mono text-[10px] text-agave-400 font-bold tracking-widest uppercase flex items-center gap-1.5">
+          <span className="font-mono text-xs font-semibold tracking-wider text-agave-400 font-bold tracking-widest uppercase flex items-center gap-1.5">
             <HelpCircle className="w-3.5 h-3.5" />
             Catering Logistics
           </span>
           <h3 className="font-display font-medium text-3xl text-white mt-1">Event Logistics FAQ.</h3>
-          <p className="text-zinc-500 text-xs mt-1 max-w-lg">
+          <p className="text-zinc-300 text-xs mt-1 max-w-lg">
             Essential information regarding travel radius boundaries, transport surcharges, site logistics, and budget guidelines for our private gastronomy commissions.
           </p>
         </div>
-        <div className="bg-charcoal/50 border border-zinc-850 px-4 py-2 rounded-xl text-[11px] text-zinc-400 max-w-xs leading-normal">
+        <div className="bg-charcoal/50 border border-zinc-850 px-4 py-2 rounded-xl text-xs font-semibold text-zinc-400 max-w-xs leading-normal">
           <span className="text-white font-semibold">Need more help?</span> Fill out the catering estimation wizard above and our team will follow up within 24 hours.
         </div>
       </div>
@@ -78,15 +78,15 @@ export const EventLogisticsFAQ: React.FC = () => {
         <div className="md:col-span-4 bg-charcoal border border-zinc-850 p-6 rounded-2xl flex flex-col justify-between space-y-6 relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-radial from-agave-950/20 to-transparent rounded-full -mr-10 -mt-10 pointer-events-none group-hover:scale-110 transition-transform duration-700" />
           <div className="space-y-3">
-            <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block font-bold">COMMITMENT TO RIGOR</span>
+            <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest block font-bold">COMMITMENT TO RIGOR</span>
             <h4 className="font-display text-lg text-white leading-snug">
               Uncompromising transport, pristine execution.
             </h4>
-            <p className="text-zinc-500 text-xs leading-relaxed">
+            <p className="text-zinc-300 text-xs leading-relaxed">
               We travel complete with active wood-charcoal hearths, temperature-controlled ingredient cells, and raw slate plating layouts. Every mile traveled ensures restaurant-grade street gastronomy.
             </p>
           </div>
-          <div className="border-t border-zinc-850 pt-4 flex items-center justify-between text-[11px]">
+          <div className="border-t border-zinc-850 pt-4 flex items-center justify-between text-xs font-semibold">
             <span className="text-zinc-400 font-mono">Service Standard</span>
             <span className="text-agave-400 font-mono font-semibold">5-Star Editorial</span>
           </div>
@@ -112,12 +112,12 @@ export const EventLogisticsFAQ: React.FC = () => {
                 >
                   <div className="flex items-start gap-3">
                     <div className={`w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${
-                      isOpen ? 'bg-agave-950/50 border border-agave-500/30 text-agave-400' : 'bg-zinc-900 text-zinc-500'
+                      isOpen ? 'bg-agave-950/50 border border-agave-500/30 text-agave-400' : 'bg-zinc-900 text-zinc-300'
                     }`}>
                       {item.icon}
                     </div>
                     <div>
-                      <span className="text-[9px] font-mono uppercase tracking-wider text-zinc-500 block font-bold">
+                      <span className="text-[9px] font-mono uppercase tracking-wider text-zinc-300 block font-bold">
                         {item.category}
                       </span>
                       <h4 className={`text-sm font-semibold transition-colors mt-0.5 ${
@@ -131,7 +131,7 @@ export const EventLogisticsFAQ: React.FC = () => {
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.2, ease: 'easeOut' }}
                     className={`p-1 rounded-full flex-shrink-0 mt-1 ${
-                      isOpen ? 'text-agave-400' : 'text-zinc-500'
+                      isOpen ? 'text-agave-400' : 'text-zinc-300'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />

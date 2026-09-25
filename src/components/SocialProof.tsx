@@ -92,7 +92,7 @@ export const SocialProof: React.FC = () => {
             Gastronomy Chronicles
           </span>
           <h3 className="font-display font-medium text-3xl text-white mt-1">Client Chronicles &amp; Proof.</h3>
-          <p className="text-zinc-500 text-sm mt-1 max-w-xl">
+          <p className="text-zinc-300 text-sm mt-1 max-w-xl">
             A window into our past private event commissions, gallery launch receptions, and high-ticket weddings across Southern California.
           </p>
         </div>
@@ -138,7 +138,7 @@ export const SocialProof: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-charcoal via-transparent to-transparent opacity-90" />
               
               {/* Event Coordinates Overlay badge */}
-              <div className="absolute bottom-4 left-4 bg-obsidian/90 backdrop-blur-md border border-zinc-850 py-1.5 px-3 rounded-xl text-[10px] font-mono text-zinc-400">
+              <div className="absolute bottom-4 left-4 bg-obsidian/90 backdrop-blur-md border border-zinc-850 py-1.5 px-3 rounded-xl text-xs font-semibold tracking-wider font-mono text-zinc-400">
                 <span className="text-white font-bold block">{t.eventType}</span>
                 {t.date}
               </div>
@@ -174,7 +174,7 @@ export const SocialProof: React.FC = () => {
                   <h4 className="font-display font-medium text-sm text-white">
                     {t.clientName}
                   </h4>
-                  <p className="text-[10px] font-mono uppercase tracking-wider text-zinc-500">
+                  <p className="text-xs font-semibold tracking-wider font-mono uppercase tracking-wider text-zinc-300">
                     {t.organization}
                   </p>
                 </div>
